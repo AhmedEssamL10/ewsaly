@@ -21,4 +21,5 @@ Route::get('/', function () {
 Route::prefix('code')->controller(CodeController::class)->group(function(){
     Route::get('create','create')->name('code.create');
     Route::get('store','store')->name('code.store');
+    Route::get('check','check')->name('code.check');
 });
