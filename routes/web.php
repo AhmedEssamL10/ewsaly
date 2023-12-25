@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Project\CodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('code')->controller(CodeController::class)->group(function(){
+    Route::get('create','create')->name('code.create');
+    Route::get('store','store')->name('code.store');
 });
