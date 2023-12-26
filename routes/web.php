@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\Project\CodeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,4 @@ Route::prefix('code')->controller(CodeController::class)->group(function(){
     Route::get('{code}','check')->name('code.check');
 });
 Route::post('register',[RegisterController::class,'register'])->name('register');
+Route::post('message/store',[MessageController::class,'store'])->name('message.store');

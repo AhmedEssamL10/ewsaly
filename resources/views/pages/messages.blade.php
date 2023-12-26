@@ -7,7 +7,7 @@
     </div>
 @endif
 
-<form method="POST" action="">
+<form method="POST" action="{{route('message.store')}}">
     @csrf
     <div class="m-3">
     <div class="mb-3">
@@ -18,7 +18,7 @@
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Message</label>
-      <input type="text" class="form-control" name="message" id="exampleInputEmail1" >
+      <input type="text" class="form-control" name="content" id="exampleInputEmail1" >
     </div>
       @if ($errors->any())
     <div class="alert alert-danger">
