@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::prefix('code')->controller(CodeController::class)->group(function(){
     Route::get('create','create')->name('code.create');
     Route::get('store','store')->name('code.store');
-    Route::get('check','check')->name('code.check');
+    // Route::get('check','check')->name('code.check');
+    Route::get('{code}','check')->name('code.check');
 });
 Route::post('register',[RegisterController::class,'register'])->name('register');
