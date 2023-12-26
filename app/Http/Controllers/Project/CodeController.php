@@ -31,7 +31,7 @@ class CodeController extends Controller
                 return view('Auth.register',compact('code'));
             }
             else{
-                return view('pages.code.write-code');
+                return view('pages.messages',compact('code'));
             }
         }
     }
