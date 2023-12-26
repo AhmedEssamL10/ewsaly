@@ -1,6 +1,7 @@
 @extends('layouts.parent')
 @section('content')
     <form method="POST" action="{{route('register')}}">
+        @csrf
         <div class="m-3">
             @if ($errors->any())
                 <div class="alert alert-danger">

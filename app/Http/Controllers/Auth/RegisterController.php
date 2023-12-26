@@ -34,6 +34,6 @@ class RegisterController extends Controller
         Code::where('code',$request->code)->update([
             'user_id'=>$user->id
         ]);
-       return back()->with('success','the user is created success');
+       return redirect(route('code.create'))->with('success','the user is created success');
     }
 }
