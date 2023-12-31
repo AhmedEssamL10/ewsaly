@@ -1,4 +1,4 @@
-@extends('layouts.parent')
+@extends('layouts.header')
 @section('content')
 
 @if(session('error'))

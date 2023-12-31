@@ -24,6 +24,30 @@
         </div>
 
         <div>
+            <x-input-label for="phone" :value="__('Phone')" />
+            <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full" :value="old('phone', $user->phone)" required autofocus autocomplete="phone" />
+            <x-input-error class="mt-2" :messages="$errors->get('phone')" />
+        </div>
+
+        <div>
+            <x-input-label for="car_color" :value="__('Car Color')" />
+            <x-text-input id="car_color" name="car_color" type="text" class="mt-1 block w-full" :value="old('car_color', $user->car_color)" required autofocus autocomplete="car_color" />
+            <x-input-error class="mt-2" :messages="$errors->get('car_color')" />
+        </div>
+
+        <div>
+            <x-input-label for="car_model" :value="__('Car Model')" />
+            <x-text-input id="car_model" name="car_model" type="text" class="mt-1 block w-full" :value="old('car_model', $user->car_model)" required autofocus autocomplete="car_model" />
+            <x-input-error class="mt-2" :messages="$errors->get('car_model')" />
+        </div>
+
+        <div>
+            <x-input-label for="plate_number" :value="__('Plate Number')" />
+            <x-text-input id="plate_number" name="plate_number" type="text" class="mt-1 block w-full" :value="old('plate_number', $user->plate_number)" required autofocus autocomplete="plate_number" />
+            <x-input-error class="mt-2" :messages="$errors->get('plate_number')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
