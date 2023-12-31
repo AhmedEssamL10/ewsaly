@@ -57,10 +57,11 @@
     </header>
     <main class="h-screen ">
       <section>
+        @yield('content')
         <p></p>
       </section>
     </main>
-    @yield('content')
+  
    
 
     <footer>

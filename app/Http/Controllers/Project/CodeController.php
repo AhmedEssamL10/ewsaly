@@ -35,14 +35,5 @@ class CodeController extends Controller
             }
         }
     }
-    // public function check(Request $request){
-    //         $request->validate([
-    //         'code'=>"required"
-    //     ]);
-    //     $code = $request->code;
-    //     if(Code::where('code',$code)->first()){
-    //         return view('Auth.register',compact('code'));
-    //     }
-    //     return back()->with('error','this code is invalid');
-    // }
+
 }

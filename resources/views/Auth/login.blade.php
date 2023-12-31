@@ -79,7 +79,8 @@
             Wlecom to <span class="text-primary_colour">EWSLY</span>
           </h1>
 
-          <form action="">
+          <form method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="flex flex-col gap-4">
               <div class="grid md:grid-cols-2  grid-cols-1 gap-5 p-10">
 

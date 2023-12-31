@@ -1,4 +1,5 @@
 @extends('layouts.header')
+@section('title','message')
 @section('content')
 
 @if(session('error'))
