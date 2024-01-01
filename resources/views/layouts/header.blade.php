@@ -17,13 +17,13 @@
         <div>
           <ul class="flex md:gap-4 gap-2 flex-wrap">
             <li>
-              <a href="{{ route('home') }}" class="hover:border-b-2 hover:border-primary_colour"
+              <a href="{{ route('home') }}"  class="nav-links {{ Route::currentRouteName() === 'home' ? ' active' : '' }} "
                 >Home</a
               >
             </li>
             @auth
             <li>
-              <a href="{{route('profile.edit')}}" class="hover:border-b-2 hover:border-primary_colour"
+              <a href="{{route('profile.edit')}}" class="nav-links {{ Route::currentRouteName() === 'profile.edit' ? ' active' : '' }} "
                 >Profile</a
               >
             </li>
