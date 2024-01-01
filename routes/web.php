@@ -19,7 +19,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -17,15 +17,18 @@
         <div>
           <ul class="flex md:gap-4 gap-2 flex-wrap">
             <li>
-              <a href="" class="hover:border-b-2 hover:border-primary_colour"
+              <a href="{{ route('home') }}" class="hover:border-b-2 hover:border-primary_colour"
                 >Home</a
               >
             </li>
+            @auth
             <li>
-              <a href="" class="hover:border-b-2 hover:border-primary_colour"
+              <a href="{{route('profile.edit')}}" class="hover:border-b-2 hover:border-primary_colour"
                 >Profile</a
               >
             </li>
+            @endauth
+         
             <li>
               <a href="" class="hover:border-b-2 hover:border-primary_colour"
                 >About</a
@@ -36,16 +39,26 @@
                 >Contact us</a
               >
             </li>
+            @auth
             <li>
-              <a href="" class="hover:border-b-2 hover:border-primary_colour"
-                >Log out</a
-              >
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Log out') }}
+                </x-dropdown-link>
+            </form>
             </li>
+            @endauth
+            @guest
             <li>
-              <a href="" class="hover:border-b-2 hover:border-primary_colour"
+              <a href="{{route('login')}}" class="hover:border-b-2 hover:border-primary_colour"
                 >Sign in</a
               >
             </li>
+            @endguest
           </ul>
         </div>
       </nav>
