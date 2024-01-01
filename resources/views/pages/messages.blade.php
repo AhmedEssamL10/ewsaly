@@ -8,19 +8,14 @@
     </div>
 @endif
 
-<form method="POST" action="{{route('message.store')}}">
+<form method="POST" class="container grid grid-cols-1 p-4" action="{{route('message.store')}}">
     @csrf
-    <div class="m-3">
-    <div class="mb-3">
-        <input type="hidden" name="code" value="{{$code}}">
-      <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-      <input type="text" class="form-control" name="phone" id="exampleInputEmail1" >
-    </div>
 
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Message</label>
-      <input type="text" class="form-control" name="content" id="exampleInputEmail1" >
-    </div>
+        <input type="hidden" name="code" value="{{$code}}">
+      <input type="text" class="input-field w-1/2 mb-3" placeholder="phone" name="phone" id="exampleInputEmail1" >
+
+      <textarea placeholder="Write your message"  name="content" cols="30" rows="10" class="input-field"></textarea>
+
       @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -30,7 +25,6 @@
         </ul>
 @endif
     </div>
-    <button type="submit" class="btn btn-primary m-3">Send</button>
-</div>
+    <button type="submit" class="btn-submit mt-4">Send</button>
   </form>
 @endsection
