@@ -17,7 +17,7 @@
     <main class="flex h-full justify-center items-center px-2">
         <section class="w-full flex md:flex-row flex-col bg-white container gap-4">
             <div class="md:w-1/2 rounded-xl flex flex-col justify-center content-center">
-                <img src="{{ asset('/images/1.jpg') }}" alt="img1" />
+                <img src="{{ asset('/images/3.jpeg') }}" alt="img1" />
             </div>
             <div
                 class="md:w-1/2 bg-gradient-to-bl from-[rgba(227,249,237,1)] to-[rgba(217,217,217,0)] rounded-xl flex flex-col justify-evenly gap-4 p-10">
