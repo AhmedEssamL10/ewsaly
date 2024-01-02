@@ -85,3 +85,12 @@
 </div>
 </body>
 </html> --}}
+
+
+{{-- <div class="container p-2">
+
+    <button class="accordion">Message history</button>
+        @foreach ($messages as $message)
+            {{$message->content}}
+        @endforeach
+</div> --}}

@@ -33,14 +33,13 @@
                         <div class="grid md:grid-cols-2 gap-5">
                             <x-text-input id="name"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="text" name="name" :value="old('name')" required autofocus placeholder="Name"
+                                type="text" name="name" :value="old('name')"  autofocus placeholder="Name"
                                 autocomplete="name" />
-                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-
+                            <x-input-error :messages="$errors->get('name')" class="error_masg-2" />
 
                             <x-text-input id="phone" placeholder="Phone"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="text" name="phone" :value="old('phone')" required autofocus
+                                type="text" name="phone" :value="old('phone')"  autofocus
                                 autocomplete="phone" />
                             <x-input-error :messages="$errors->get('phone')" class="mt-2" />
 
@@ -48,23 +47,23 @@
 
                             <x-text-input id="email" placeholder="Email address"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="email" name="email" :value="old('email')" required autocomplete="username" />
+                                type="email" name="email" :value="old('email')"  autocomplete="username" />
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
                             <x-text-input id="car_color" placeholder="Car color"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="text" name="car_color" :value="old('car_color')" required autofocus
+                                type="text" name="car_color" :value="old('car_color')"  autofocus
                                 autocomplete="car_color" />
                             <x-input-error :messages="$errors->get('car_color')" class="mt-2" />
 
                             <x-text-input id="password" placeholder="Password"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="password" name="password" required autocomplete="new-password" />
+                                type="password" name="password"  autocomplete="new-password" />
 
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                             <x-text-input id="password_confirmation" placeholder="Password confirmation"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent"
-                                type="password" name="password_confirmation" required autocomplete="new-password" />
+                                type="password" name="password_confirmation"  autocomplete="new-password" />
 
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
@@ -72,13 +71,13 @@
 
                             <x-text-input id="car_model" placeholder="Car model"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="text" name="car_model" :value="old('car_model')" required autofocus
+                                type="text" name="car_model" :value="old('car_model')"  autofocus
                                 autocomplete="car_model" />
                             <x-input-error :messages="$errors->get('car_model')" class="mt-2" />
 
                             <x-text-input id="plate_number" placeholder="Plate number"
                                 class="focus:outline-none focus: border-b-2 focus:border-primary_colour bg-transparent grid-cols-2"
-                                type="text" name="plate_number" :value="old('plate_number')" required autofocus
+                                type="text" name="plate_number" :value="old('plate_number')"  autofocus
                                 autocomplete="plate_number" />
                             <x-input-error :messages="$errors->get('plate_number')" class="mt-2" />
 

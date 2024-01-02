@@ -653,6 +653,13 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
+.error_masg {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .nav-links:hover {
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
@@ -753,12 +760,12 @@ video {
   margin-bottom: 2rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-3 {
   margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mt-4 {
@@ -785,12 +792,12 @@ video {
   height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-1\/2 {
   width: 50%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .grid-cols-1 {

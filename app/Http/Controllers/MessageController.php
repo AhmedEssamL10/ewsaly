@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Code;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
@@ -20,5 +21,9 @@ class MessageController extends Controller
             'user_id'=>$user->user_id
         ]);
         return back();
+    }
+    public function messageHistory(){
+        $messages = Message::where('user_id',Auth::user()->id)->get();
+        return view('profile.partials.delete-user-form',compact('messages'));
     }
 }

@@ -39,5 +39,6 @@ Route::prefix('code')->controller(CodeController::class)->group(function(){
 });
 // Route::post('register',[RegisterController::class,'register'])->name('register');
 Route::post('message/store',[MessageController::class,'store'])->name('message.store');
+Route::post('/profile',[MessageController::class,'messageHistory'])->name('message.history');
 
 require __DIR__.'/auth.php';
