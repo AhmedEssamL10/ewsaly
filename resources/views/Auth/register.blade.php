@@ -87,7 +87,7 @@
                         </div>
                         <div class="flex flex-col gap-2 justify-center items-center">
                             <button type="submit"
-                                class="p-2 rounded-md bg-primary_colour text-white transition hover:scale-95 hover:bg-[#52e9d2]">
+                                class="btn-submit">
                                 Sign Up
                             </button>
                             <p>
