@@ -24,7 +24,9 @@ class User extends Authenticatable
         'car_model',
         'car_color',
         'phone',
-        'plate_number'
+        'plate_number',
+        'code',
+        'code_expired_at'
     ];
 
     /**

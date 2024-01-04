@@ -5,6 +5,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Project\CodeController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\VerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,6 @@ Route::prefix('code')->controller(CodeController::class)->group(function(){
 // Route::post('register',[RegisterController::class,'register'])->name('register');
 Route::post('message/store',[MessageController::class,'store'])->name('message.store');
 Route::post('/profile',[MessageController::class,'messageHistory'])->name('message.history');
+Route::get('/verificaiton',[VerificationController::class,'sendCode'])->name('sendCode');
 
 require __DIR__.'/auth.php';
