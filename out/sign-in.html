@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="h-screen">
+    <main class="flex h-full justify-center items-center px-2">
+      <section
+        class="w-full flex md:flex-row flex-col bg-white container gap-4 p-10"
+      >
+        <div
+          class="md:w-1/2 rounded-xl flex flex-col justify-center content-center"
+        >
+          <img src="./images/3.jpeg" alt="img1" />
+        </div>
+        <div
+          class="md:w-1/2 bg-gradient-to-bl from-[rgba(227,249,237,1)] to-[rgba(217,217,217,0)] rounded-xl flex flex-col justify-evenly gap-4 p-10"
+        >
+          <h1
+            class="text-text_primary font-serif w-full text-center font-bold text-xl md:text-6xl"
+          >
+            Wlecom to <span class="text-primary_colour">EWSLY</span>
+          </h1>
+
+          <form action="">
+            <div class="flex flex-col gap-4">
+              <div class="grid md:grid-cols-2  grid-cols-1 gap-5 p-10">
+                <div>
+                  <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  class="input-field"
+                />
+                <p class="error_masg"></p>
+                </div>
+                <div>
+                  <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="input-field"
+                />
+                <p class="error_masg"></p>
+                </div>
+                <div>
+                  <div class="flex gap-2">
+                    <input type="checkbox" name="" id="" class="accent-primary_colour ">
+                    <p class="text-text_primary">Remember me</p>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <div class="flex flex-col gap-2 justify-center items-center">
+                <button
+                  type="submit"
+                  class="btn-submit"
+                >
+                  Sign In
+                </button>
+                <a href="" class="text-primary_colour border-b-2 border-primary_colour">
+                  Forget my passsword
+                </a>
+                <!-- <p>
+                  Are you have Email?
+                  <a
+                    href=""
+                    class="text-primary_colour border-b-2 border-primary_colour"
+                    >Sign In</a
+                  >
+                </p> -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
