@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','userVerified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -41,6 +41,8 @@ Route::prefix('code')->controller(CodeController::class)->group(function(){
 // Route::post('register',[RegisterController::class,'register'])->name('register');
 Route::post('message/store',[MessageController::class,'store'])->name('message.store');
 Route::post('/profile',[MessageController::class,'messageHistory'])->name('message.history');
-Route::get('/verificaiton',[VerificationController::class,'sendCode'])->name('sendCode');
+Route::get('/verificaiton/sendcode',[VerificationController::class,'sendCode'])->name('sendCode');
+Route::post('/verificaiton/store-code',[VerificationController::class,'checkCode'])->name('checkCode');
+Route::get('/verificaiton',[VerificationController::class,'index'])->name('verification.index');
 
 require __DIR__.'/auth.php';

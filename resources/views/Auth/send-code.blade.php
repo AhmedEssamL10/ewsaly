@@ -1,0 +1,1 @@
+<a href="{{ route('sendCode') }}">send code</a>
