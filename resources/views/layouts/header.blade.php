@@ -49,7 +49,7 @@
               </button>
             </li>
             <li>
-              <a href="{{ route('home') }}"  class="nav-links {{ Route::currentRouteName() === 'home' ? ' active' : '' }} "
+              <a href="{{ route('home') }}" class="nav-links {{ Route::currentRouteName() == 'home' ? ' active' : '' }} "
               >Home</a
             >
             </li>
@@ -78,7 +78,7 @@
                   <form method="POST" class="nav-links" action="{{ route('logout') }}">
                     @csrf
     
-                    <a href="route('logout')"
+                    <a href="{{route('logout')}}"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log out') }}
@@ -101,27 +101,27 @@
         </nav>
       </header>
       <!-- end header -->
-      <main class="container p-2 flex flex-col gap-16">
+      {{-- <main class="container p-2 flex flex-col gap-16">
         <section>
-        @yield('content')
-      </section>
-    </main>
+        </section>
+      </main> --}}
+      @yield('content')
   
    
 
-    <footer class="bg-light mt-4">
+    <footer class="bg-light mt-4 ">
       <div class="container p-6">
-        <div class="grid md:grid-cols-2 grid-cols-1 md:h-[300px]">
-          <div class="h-full flex flex-col p-2 gap-4">
+        <div class="grid md:grid-cols-2 grid-cols-1">
+          <div class="h-full flex flex-col p-2 md:gap-4 gap-2">
             <p class="text-text_primary text-[11px] tracking-wider">ADDRESS</p>
-            <p class="text-2xl">
+            <p class="md:text-2xl">
               290 Maryam Springs 260,
               <br />
               Courbevoie, Paris, France
             </p>
           </div>
           <hr class="block md:hidden my-4" />
-          <div class="h-full flex flex-col p-2 gap-5">
+          <div class="h-full flex flex-col p-2 md:gap-5 gap-3">
             <p class="text-text_primary text-[11px] tracking-wider">
               CONTACT US
             </p>
@@ -129,42 +129,44 @@
               <p class="text-text_primary text-[11px] tracking-wider">
                 CALL US DIRECTLY
               </p>
-              <p class="text-2xl">(812) 721-1236</p>
+              <p class="md:text-2xl">(812) 721-1236</p>
             </div>
             <div>
               <p class="text-text_primary text-[11px] tracking-wider">
                 MAIL US DIRECTLY
               </p>
-              <p class="text-2xl">info@liquid.com</p>
+              <p class="md:text-2xl">info@liquid.com</p>
             </div>
           </div>
         </div>
-        <ul class="flex justify-center flex-wrap md:justify-end mt-8 gap-5 ">
-          <li>
-            <a target="_blank" href=""
-              ><i class="fa-brands fa-linkedin text-text_primary"></i>
-              linkedin</a
-            >
-          </li>
-          <li>
-            <a target="_blank" href=""
-              ><i class="fa-brands fa-x-twitter text-text_primary"></i>
-              Linkedin</a
-            >
-          </li>
-          <li><a href="">Privacy Policy</a></li>
-        </ul>
         <hr class="block my-8" />
-        <p class="text-text_primary text-center p-2">
-          © 2023, Made with ❤️ by
-          <span
-            ><a
-              href=""
-              class="text-primary_colour border-b-2 border-primary_colour"
-              >KyanLabs</a
-            ></span
-          >
-        </p>
+        <div class="flex flex-col-reverse md:flex-row md:items-center md:justify-between">
+          <p class="text-text_primary text-center p-2">
+            © 2023, Made with ❤️ by
+            <span
+              ><a
+                href=""
+                class="text-primary_colour border-b-2 border-primary_colour"
+                >KyanLabs</a
+              ></span
+            >
+          </p>
+          <ul class="flex justify-center flex-wrap md:justify-end gap-5">
+            <li>
+              <a target="_blank" href=""
+                ><i class="fa-brands fa-linkedin text-text_primary"></i>
+                linkedin</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href=""
+                ><i class="fa-brands fa-x-twitter text-text_primary"></i>
+                Linkedin</a
+              >
+            </li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
     <!-- end footer -->
@@ -174,16 +176,14 @@
       const closeNav = document.getElementById("close_nav");
       const container_links = document.getElementById("container_links");
       const userConLinks = document.querySelector(".user_con_links");
-      const userLinks = document.querySelector(".user_links");
-      const navLinks = document.querySelector(".nav-links");
+      
 
       document.addEventListener("click", (e) => {
         if (
           e.target === container_links ||
           e.target === openNav ||
-          e.target === userConLinks ||
-          e.target == userLinks ||
-          e.target == navLinks
+          e.target === userConLinks
+       
         ) {
           container_links.classList.add("on");
           container_links.classList.remove("off");

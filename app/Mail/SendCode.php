@@ -13,12 +13,13 @@ class SendCode extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $user;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -27,7 +28,7 @@ class SendCode extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Send Code',
+            subject: 'Code verification, Ewsly',
         );
     }
 
@@ -37,7 +38,7 @@ class SendCode extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.send_mail_verify',
         );
     }
 
